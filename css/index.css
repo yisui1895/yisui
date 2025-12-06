@@ -1,0 +1,179 @@
+/* 首页CSS样式 */
+/* 版心居中 宽度1200px*/
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+/* 全局背景颜色配置 */
+body {
+    background-color: #f3f5f7;
+}
+
+/* 头部区域:通栏容器,固定高度*/
+.header {
+    height: 100px;
+    background-color: #fff;
+}
+
+/* 头部区域>顶部导航栏容器 */
+.header .wrapper {
+    padding-top: 29px;
+    display: flex;
+}
+
+/* 顶部导航栏logo */
+.logo a {
+    display: block;
+    width: 195px;
+    height: 39px;
+    background-image: url(../images/logo.jpg);
+    /* 禁止背景图平铺|演示中未使用  */
+    background-repeat: no-repeat;  
+    /* 背景图在容器里居中显示|演示中未使用  */
+    background-position: center center;  
+    /* 强制贴合调整后的尺寸，不会挤压|演示中未使用 */
+    background-size: 100% 100%;  
+    /* 等比缩放，完整显示不挤压（核心！） */
+    /* background-size: contain; */
+    /* 隐藏字体 */
+    font-size: 0;
+    }
+
+    /* 顶部导航栏父容器 */
+    .nav {
+        margin-left: 102px;
+    }
+    /* 顶部导航栏>主页|课程|职业规划区域容器 */
+    .nav ul {
+        display: flex;
+    }   
+    /* 顶部导航栏>选项 */
+    .nav li {
+        margin-right: 24px;
+    }
+
+    /* 顶部导航>超链接 */
+    .nav li a {
+        display: block;
+        padding: 6px 8px;
+        line-height: 27px;
+        font-size: 19px;
+    }
+
+    /* 顶部导航选项>默认效果及鼠标悬停样式 */
+    /* active 类选择器,表示默认选中的a */
+    .nav li .active,
+    .nav a:hover {
+        border-bottom: 2px solid #00a4ff;
+    }
+
+    /* 顶部导航栏>搜索区域 */
+    .search {
+        display: flex;
+        margin-left: 64px;
+        padding-left: 19px;
+        padding-right: 12px;
+        width: 412px;
+        height: 40px;
+        background-color: #f3f5f7;
+        border-radius: 20px;
+    }
+
+    /* 顶部导航>文本输入框 */
+    .search input {
+        flex: 1;
+        border: 0;
+        background-color: transparent;
+        outline: none; /*去除表单控件的焦点框*/
+    }
+
+    /* ::placeholder 选中就是 placeholder 属性的文字样式 */
+    .search input::placeholder {
+        font-size: 14px;
+        color: #999;
+    }
+
+    /* 顶部导航>文本输入框图标 */
+    /* 注意：当父级是flex布局时，子级会变成"弹性盒子"，即便不改显示模式加宽高也生效 */
+    .search a {
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/search.png);
+        align-self: center;
+    }
+
+    /* 顶部导航>用户区域父容器 */
+    .user {
+        margin-left: 32px;
+        margin-top: 3px;
+    }
+
+    /* 顶部导航>头像/用户名区域（老师没写头像框/直接用的img和span） */ 
+    .user a {
+        display: flex;
+        align-items: center;
+    }
+
+    /* 顶部导航>头像框固定尺寸（老师没写） */
+    .user .avatar {
+        margin-right: 7px; 
+        width: 39px;
+        height: 39px;
+        border-radius: 50%;
+        overflow: hidden; /*溢出隐藏*/
+    }
+
+    /* 顶部导航>头像图片 */
+    .user .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        /* ↓ vertical-align——行内块和行内元素垂直方向对齐方式 */
+        /* ↓ 这里我直接用的flex侧轴对齐（老师没写头像框） */
+        /* vertical-align: middle;  */
+    }
+
+    /* 顶部导航>用户名 */
+    .user span {
+        font-size: 16px;
+        color: #666;
+    }
+
+    /* banner区域：父容器 */
+    .banner {
+        height: 420px;
+        background-color: rgba(240, 230, 250, 0.8);
+    }
+
+    /* banner>左、右父容器 */
+    .banner .wrapper {
+        display: flex;
+        justify-content: space-between;
+        height: 420px;
+        background-image: url(../uploads/banner.png);
+    }
+
+    /* banner>左侧导航容器 */
+    .left {
+        padding: 3px 20px;
+        width: 192px;
+        height: 420px;
+        background-color: rgba(220, 210, 235, 0.6); 
+    }
+
+    /* banner左侧导航>超链接、字体、背景图 */
+    .left li a {
+        display: block;
+        height: 46px;
+        background: url(../images/right.png) no-repeat right center;
+        line-height: 46px;
+        font-size: 16px;
+        color: #657d6f;
+    }
+
+    /* banner左侧导航>悬停特效 */
+    .left li a:hover {
+        background-image: url(../images/right-hover.png);
+        color: #6E5059;
+    }
